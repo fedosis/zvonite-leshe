@@ -1,0 +1,2967 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ремонт духовых шкафов и варочных панелей — Частный мастер с гарантией до 1 года</title>
+<meta name="description" content="Частный мастер по ремонту электрических духовых шкафов и варочных панелей. Выезд в день обращения. Гарантия до 1 года. Работаю без посредников.">
+<meta name="keywords" content="ремонт духовых шкафов, ремонт варочных панелей, частный мастер, ремонт электродуховок, замена тэна, ремонт на дому">
+
+<meta property="og:title" content="Ремонт духовых шкафов и варочных панелей — Частный мастер">
+<meta property="og:description" content="Ремонт электрических духовых шкафов и варочных панелей с гарантией до 1 года. Выезд в день обращения.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fedosis.github.io/landings/oven-repair/">
+<meta property="og:locale" content="ru_RU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ремонт духовых шкафов и варочных панелей — Частный мастер">
+<meta name="twitter:description" content="Ремонт электрических духовых шкафов и варочных панелей с гарантией до 1 года. Выезд в день обращения.">
+
+<link rel="canonical" href="https://fedosis.github.io/landings/oven-repair/">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+/* ============================================
+ROOT VARIABLES & RESET
+============================================ */
+:root {
+--bg-primary: #F8FAFC;
+--bg-secondary: #FFFFFF;
+--bg-tertiary: #F1F5F9;
+--accent: #2563EB;
+--accent-light: #3B82F6;
+--accent-green: #22C55E;
+--text-primary: #0F172A;
+--text-secondary: #475569;
+--text-muted: #94A3B8;
+--glass-bg: rgba(255, 255, 255, 0.75);
+--glass-border: rgba(0, 0, 0, 0.06);
+--glass-border-hover: rgba(37, 99, 235, 0.2);
+--shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+--shadow-glow: 0 4px 24px rgba(37, 99, 235, 0.12);
+
+/* Adaptive border-radius — scale with viewport */
+--radius-sm: clamp(6px, 0.6vw, 10px);
+--radius-md: clamp(12px, 1.2vw, 20px);
+--radius-lg: clamp(16px, 2vw, 32px);
+--radius-xl: clamp(20px, 2.5vw, 40px);
+
+/* Adaptive spacing */
+--section-padding: clamp(48px, 8vw, 120px);
+--card-padding: clamp(20px, 2.5vw, 36px);
+--container-max: 1280px;
+
+--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+background: var(--bg-primary);
+color: var(--text-primary);
+overflow-x: hidden;
+line-height: 1.6;
+}
+
+/* ============================================
+SCROLLBAR
+============================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* ============================================
+GLASSMORPHISM
+============================================ */
+.glass {
+background: var(--glass-bg);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid var(--glass-border);
+}
+.glass-card {
+background: var(--glass-bg);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+transition: var(--transition);
+}
+.glass-card:hover {
+border-color: rgba(37, 99, 235, 0.3);
+box-shadow: var(--shadow-glow);
+transform: translateY(-4px);
+}
+
+/* ============================================
+ANIMATIONS
+============================================ */
+.reveal {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.reveal-left {
+opacity: 0;
+transform: translateX(-40px);
+transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-left.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.reveal-right {
+opacity: 0;
+transform: translateX(40px);
+transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-right.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.reveal-scale {
+opacity: 0;
+transform: scale(0.9);
+transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-scale.visible {
+opacity: 1;
+transform: scale(1);
+}
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseGlow {
+0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+50% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.6); }
+}
+
+/* ============================================
+NAVBAR
+============================================ */
+.navbar {
+padding: 12px 0;
+transition: var(--transition);
+z-index: 1050;
+}
+.navbar-brand img {
+box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 2px 12px rgba(0,0,0,0.2);
+transition: box-shadow 0.3s ease;
+}
+.navbar.scrolled .navbar-brand img {
+box-shadow: 0 0 0 2px rgba(37,99,235,0.15), 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar.scrolled {
+background: rgba(45, 50, 65, 0.88) !important;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar .logo-text {
+font-weight: 800;
+font-size: 1.35rem;
+color: #fff;
+text-decoration: none;
+line-height: 1.2;
+}
+.navbar.scrolled .logo-text {
+color: #fff;
+}
+.navbar .logo-sub {
+font-size: 0.7rem;
+font-weight: 400;
+color: rgba(255, 255, 255, 0.6);
+letter-spacing: 0.02em;
+}
+.navbar.scrolled .logo-sub {
+color: rgba(255, 255, 255, 0.5);
+}
+.navbar .brand-title {
+font-weight: 900;
+font-size: clamp(1rem, 2.2vw, 1.4rem);
+color: #fff;
+text-decoration: none;
+line-height: 1.1;
+letter-spacing: 0.06em;
+white-space: nowrap;
+padding-right: clamp(24px, 4vw, 60px);
+background: linear-gradient(135deg, #fff 60%, rgba(255,255,255,0.6));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.navbar.scrolled .brand-title {
+color: #fff;
+background: none;
+-webkit-text-fill-color: #fff;
+}
+.nav-link {
+color: rgba(255, 255, 255, 0.75) !important;
+font-weight: 500;
+font-size: 0.875rem;
+padding: 6px 14px !important;
+border-radius: var(--radius-sm);
+transition: var(--transition);
+}
+.nav-link:hover {
+color: #fff !important;
+background: rgba(255, 255, 255, 0.1);
+}
+.navbar.scrolled .nav-link {
+color: rgba(255, 255, 255, 0.8) !important;
+}
+.navbar.scrolled .nav-link:hover {
+color: #fff !important;
+background: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================
+BUTTONS
+============================================ */
+.btn-accent {
+background: var(--accent);
+color: #fff;
+border: none;
+padding: 12px 28px;
+border-radius: 12px;
+font-weight: 600;
+font-size: 0.95rem;
+transition: var(--transition);
+position: relative;
+overflow: hidden;
+}
+.btn-accent:hover {
+background: var(--accent-light);
+color: #fff;
+transform: translateY(-2px);
+box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+.btn-accent:active { transform: translateY(0); }
+
+.btn-green {
+background: var(--accent-green);
+color: #fff;
+border: none;
+padding: 12px 28px;
+border-radius: 12px;
+font-weight: 600;
+font-size: 0.95rem;
+transition: var(--transition);
+}
+.btn-green:hover {
+background: #16a34a;
+color: #fff;
+transform: translateY(-2px);
+box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+
+.btn-outline-accent {
+background: transparent;
+color: var(--accent-light);
+border: 1.5px solid var(--accent);
+padding: 12px 28px;
+border-radius: 12px;
+font-weight: 600;
+font-size: 0.95rem;
+transition: var(--transition);
+}
+.btn-outline-accent:hover {
+background: var(--accent);
+color: #fff;
+transform: translateY(-2px);
+box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.btn-icon {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+}
+.btn-icon i { font-size: 1.2rem; }
+
+.btn-cta-nav {
+background: linear-gradient(135deg, var(--accent), #1d4ed8);
+color: #fff;
+border: none;
+padding: 8px 20px;
+border-radius: 10px;
+font-weight: 600;
+font-size: 0.85rem;
+transition: var(--transition);
+}
+.btn-cta-nav:hover {
+color: #fff;
+transform: scale(1.04);
+box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+.navbar.scrolled .btn-cta-nav {
+box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* ============================================
+HERO SECTION
+============================================ */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: flex-end;
+position: relative;
+overflow: hidden;
+padding: 0 0 48px;
+}
+.hero-bg {
+position: absolute;
+inset: 0;
+z-index: 0;
+pointer-events: none;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+padding-top: 35px;
+background: #1a1a2e;
+}
+.hero-bg::after {
+content: '';
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.35);
+z-index: 1;
+}
+.hero-bg img {
+max-width: 100%;
+max-height: 100%;
+width: auto;
+height: auto;
+object-fit: contain;
+transform: translateZ(0);
+}
+@media (min-width: 768px) {
+.hero-bg img {
+max-height: 85vh;
+}
+}
+@media (min-width: 1200px) {
+.hero-bg {
+justify-content: flex-end;
+padding-right: 5%;
+}
+.hero-bg img {
+max-height: 90vh;
+max-width: 45vw;
+}
+}
+.hero::before {
+content: '';
+position: absolute;
+top: -30%;
+right: -10%;
+width: 600px;
+height: 600px;
+background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+border-radius: 50%;
+pointer-events: none;
+z-index: 1;
+}
+.hero::after {
+content: '';
+position: absolute;
+bottom: -20%;
+left: -5%;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%);
+border-radius: 50%;
+pointer-events: none;
+z-index: 1;
+}
+.hero h1 {
+font-size: clamp(1.75rem, 4vw, 3.2rem);
+font-weight: 800;
+line-height: 1.2;
+margin-bottom: 1rem;
+color: #fff;
+text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+}
+.hero h1 .highlight {
+background: linear-gradient(135deg, #93c5fd, #b3d9ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.hero p {
+font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+color: rgba(255, 255, 255, 0.85);
+max-width: 560px;
+text-shadow: 0 1px 12px rgba(0,0,0,0.35);
+}
+
+.hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(255, 255, 255, 0.12);
+border: 1px solid rgba(255, 255, 255, 0.25);
+padding: 6px 16px;
+border-radius: 50px;
+font-size: 0.8rem;
+color: #fff;
+font-weight: 600;
+margin-bottom: 1.5rem;
+backdrop-filter: blur(8px);
+text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+.hero-badge i { font-size: 0.8rem; }
+
+/* Photo frame */
+.photo-frame {
+position: relative;
+width: 100%;
+max-width: 400px;
+aspect-ratio: 3/4;
+border-radius: var(--radius-lg);
+overflow: hidden;
+background: var(--bg-secondary);
+border: 1px solid rgba(0, 0, 0, 0.06);
+box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+margin: 0 auto;
+}
+.photo-frame .placeholder {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: var(--text-muted);
+}
+.photo-frame .placeholder i {
+font-size: 4rem;
+margin-bottom: 12px;
+color: #CBD5E1;
+}
+.photo-frame .placeholder span {
+font-size: 0.85rem;
+font-weight: 300;
+}
+.photo-frame::after {
+content: '';
+position: absolute;
+inset: 0;
+border-radius: var(--radius-lg);
+box-shadow: inset 0 0 60px rgba(0,0,0,0.03);
+pointer-events: none;
+}
+
+/* ============================================
+SECTION HEADERS
+============================================ */
+.section-header {
+text-align: center;
+margin-bottom: 60px;
+}
+.section-header .label {
+display: inline-block;
+background: rgba(37, 99, 235, 0.06);
+border: 1px solid rgba(37, 99, 235, 0.12);
+padding: 4px 16px;
+border-radius: 50px;
+font-size: 0.75rem;
+font-weight: 600;
+color: var(--accent);
+text-transform: uppercase;
+letter-spacing: 0.08em;
+margin-bottom: 16px;
+}
+.section-header h2 {
+font-size: clamp(1.6rem, 3vw, 2.4rem);
+font-weight: 800;
+color: var(--text-primary);
+}
+.section-header p {
+color: var(--text-secondary);
+font-size: 1rem;
+max-width: 600px;
+margin: 12px auto 0;
+}
+
+section { padding: 100px 0; }
+
+/* ============================================
+SERVICE CARDS
+============================================ */
+.service-card {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+padding: var(--card-padding);
+height: 100%;
+transition: var(--transition);
+position: relative;
+overflow: hidden;
+box-shadow: var(--shadow-sm);
+}
+.service-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--accent), var(--accent-green));
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.4s ease;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+transform: translateY(-6px);
+border-color: var(--glass-border-hover);
+box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+}
+.service-card .icon-box {
+width: 52px;
+height: 52px;
+border-radius: 14px;
+background: rgba(37, 99, 235, 0.08);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 16px;
+transition: var(--transition);
+}
+.service-card:hover .icon-box {
+background: var(--accent);
+box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+}
+.service-card .icon-box i {
+font-size: 1.4rem;
+color: var(--accent);
+transition: var(--transition);
+}
+.service-card:hover .icon-box i { color: #fff; }
+.service-card h3 {
+font-size: 1.1rem;
+font-weight: 700;
+margin-bottom: 12px;
+}
+.service-card ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.service-card ul li {
+color: var(--text-secondary);
+font-size: 0.85rem;
+padding: 5px 0;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.service-card ul li::before {
+content: '•';
+color: var(--accent);
+font-weight: 700;
+font-size: 1.1rem;
+}
+
+/* ============================================
+ADVANTAGES / WHY ME
+============================================ */
+.advantage-card {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+padding: 28px 24px;
+height: 100%;
+transition: var(--transition);
+display: flex;
+align-items: flex-start;
+gap: 16px;
+box-shadow: var(--shadow-sm);
+}
+.advantage-card:hover {
+border-color: var(--glass-border-hover);
+box-shadow: var(--shadow-glow);
+transform: translateY(-3px);
+}
+.advantage-card .check {
+width: 36px;
+height: 36px;
+min-width: 36px;
+border-radius: 50%;
+background: rgba(34, 197, 94, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 2px;
+}
+.advantage-card .check i {
+color: var(--accent-green);
+font-size: 1rem;
+}
+.advantage-card h4 {
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 4px;
+}
+.advantage-card p {
+font-size: 0.85rem;
+color: var(--text-secondary);
+margin: 0;
+}
+
+/* ============================================
+TIMELINE
+============================================ */
+.timeline {
+position: relative;
+padding-left: 40px;
+}
+.timeline::before {
+content: '';
+position: absolute;
+left: 15px;
+top: 0;
+bottom: 0;
+width: 2px;
+background: linear-gradient(to bottom, var(--accent), var(--accent-green));
+}
+.timeline-item {
+position: relative;
+padding-bottom: 36px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item .dot {
+position: absolute;
+left: -34px;
+top: 4px;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+background: var(--bg-primary);
+border: 2px solid var(--accent);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.75rem;
+font-weight: 700;
+color: var(--accent-light);
+z-index: 2;
+}
+.timeline-item .dot.completed {
+border-color: var(--accent-green);
+color: var(--accent-green);
+}
+.timeline-item .content {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+padding: 20px 24px;
+transition: var(--transition);
+box-shadow: var(--shadow-sm);
+}
+.timeline-item .content:hover {
+border-color: var(--glass-border-hover);
+transform: translateX(4px);
+}
+.timeline-item .content h5 {
+font-size: 0.95rem;
+font-weight: 600;
+margin-bottom: 4px;
+}
+.timeline-item .content p {
+font-size: 0.83rem;
+color: var(--text-secondary);
+margin: 0;
+}
+
+/* ============================================
+PRICING CARDS
+============================================ */
+.pricing-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 24px;
+align-items: stretch;
+}
+.pricing-grid > div {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.pricing-grid .pricing-card {
+flex: 1;
+}
+@media (min-width: 1200px) {
+.pricing-grid {
+grid-template-columns: repeat(3, 1fr);
+max-width: 960px;
+margin: 0 auto;
+}
+}
+.pricing-placeholder {
+display: none;
+}
+@media (min-width: 768px) {
+.pricing-placeholder {
+display: block;
+visibility: hidden;
+}
+.pricing-placeholder .pricing-card {
+border-color: transparent !important;
+box-shadow: none !important;
+background: transparent !important;
+}
+}
+.pricing-card {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+padding: 36px 28px;
+height: 100%;
+display: flex;
+flex-direction: column;
+transition: var(--transition);
+position: relative;
+overflow: hidden;
+box-shadow: var(--shadow-sm);
+}
+.pricing-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: var(--accent);
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+.pricing-card:hover::before { opacity: 1; }
+.pricing-card:hover {
+transform: translateY(-6px);
+border-color: var(--glass-border-hover);
+box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+.pricing-card .price-icon {
+width: 56px;
+height: 56px;
+border-radius: 50%;
+background: rgba(37, 99, 235, 0.08);
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 16px;
+}
+.pricing-card .price-icon i {
+font-size: 1.5rem;
+color: var(--accent);
+}
+.pricing-card h4 {
+font-size: 1.05rem;
+font-weight: 700;
+margin-bottom: 8px;
+text-align: center;
+}
+.pricing-card .price {
+font-size: 1.75rem;
+font-weight: 800;
+color: var(--accent);
+margin-bottom: 4px;
+text-align: center;
+}
+.pricing-card .price-unit {
+font-size: 0.8rem;
+color: var(--text-muted);
+margin-bottom: 16px;
+text-align: center;
+}
+.pricing-card ul {
+list-style: none;
+padding: 0;
+margin: 0 0 20px;
+text-align: left;
+flex: 1;
+}
+.pricing-card ul li {
+color: var(--text-secondary);
+font-size: 0.83rem;
+padding: 5px 0;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.pricing-card ul li i {
+color: var(--accent-green);
+font-size: 0.75rem;
+}
+.pricing-card .btn {
+margin-top: auto;
+}
+
+.pricing-note {
+text-align: center;
+color: var(--text-muted);
+font-size: 0.88rem;
+margin-top: 8px;
+padding: 16px 24px;
+background: var(--bg-secondary);
+border-radius: var(--radius-md);
+border: 1px solid var(--glass-border);
+}
+
+/* ============================================
+BRANDS
+============================================ */
+.brands-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+gap: 12px;
+align-items: stretch;
+}
+@media (min-width: 768px) {
+.brands-grid {
+grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+gap: 14px;
+}
+}
+@media (min-width: 1200px) {
+.brands-grid {
+grid-template-columns: repeat(6, 1fr);
+max-width: 780px;
+margin: 0 auto;
+}
+}
+.brand-item img {
+max-height: 32px;
+max-width: 90%;
+transition: transform 0.3s ease;
+}
+.brand-item:hover img {
+transform: scale(1.08);
+}
+.brand-item {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 16px 12px;
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-sm);
+font-weight: 700;
+font-size: 0.9rem;
+color: var(--text-muted);
+letter-spacing: 0.04em;
+transition: var(--transition);
+height: 100%;
+min-height: 60px;
+}
+.brand-item:hover {
+color: var(--accent);
+border-color: var(--glass-border-hover);
+background: rgba(37, 99, 235, 0.04);
+transform: translateY(-2px);
+}
+
+/* ============================================
+WORKS GALLERY
+============================================ */
+.works-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 20px;
+}
+.work-item {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+overflow: hidden;
+cursor: pointer;
+transition: var(--transition);
+}
+.work-item:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+border-color: var(--glass-border-hover);
+}
+.work-image-wrap {
+position: relative;
+aspect-ratio: 3/4;
+overflow: hidden;
+background: var(--bg-tertiary);
+}
+.work-image-wrap::after {
+content: '';
+position: absolute;
+bottom: 8px;
+left: 8px;
+width: 72px;
+height: 72px;
+background: url('assets/logo.webp') no-repeat center/contain;
+pointer-events: none;
+z-index: 1;
+opacity: 0.5;
+}
+.work-image-wrap img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+transition: transform 0.5s ease;
+background: #f0f2f5;
+}
+.work-item:hover .work-image-wrap img {
+transform: scale(1.05);
+}
+.work-caption {
+padding: 12px 14px 14px;
+}
+.work-title {
+display: block;
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--text-primary);
+line-height: 1.3;
+}
+.work-brand {
+display: block;
+font-size: 0.75rem;
+color: var(--accent);
+font-weight: 500;
+margin-top: 3px;
+}
+
+@media (max-width: 576px) {
+.works-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+inset: 0;
+z-index: 9999;
+background: rgba(0, 0, 0, 0.85);
+backdrop-filter: blur(8px);
+justify-content: center;
+align-items: center;
+padding: 40px;
+}
+.lightbox.active {
+display: flex;
+}
+.lightbox img {
+max-width: 100%;
+max-height: 90vh;
+object-fit: contain;
+border-radius: var(--radius-md);
+box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox .lb-close {
+position: absolute;
+top: 20px;
+right: 24px;
+color: #fff;
+font-size: 2rem;
+cursor: pointer;
+opacity: 0.7;
+transition: opacity 0.2s;
+background: none;
+border: none;
+line-height: 1;
+}
+.lightbox .lb-close:hover { opacity: 1; }
+.lightbox .lb-prev,
+.lightbox .lb-next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+color: #fff;
+font-size: 2.5rem;
+cursor: pointer;
+opacity: 0.5;
+transition: opacity 0.2s;
+background: none;
+border: none;
+padding: 12px;
+line-height: 1;
+}
+.lightbox .lb-prev { left: 16px; }
+.lightbox .lb-next { right: 16px; }
+.lightbox .lb-prev:hover,
+.lightbox .lb-next:hover { opacity: 1; }
+
+.lightbox::after {
+content: '';
+position: absolute;
+bottom: 20px;
+left: 20px;
+width: 96px;
+height: 96px;
+background: url('assets/logo.webp') no-repeat center/contain;
+pointer-events: none;
+opacity: 0.5;
+z-index: 2;
+}
+
+@media (max-width: 576px) {
+.works-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+.lightbox { padding: 16px; }
+.lightbox .lb-prev { left: 4px; }
+.lightbox .lb-next { right: 4px; }
+}
+
+/* ============================================
+TESTIMONIALS SLIDER
+============================================ */
+.testimonial-slider {
+position: relative;
+overflow: hidden;
+}
+.testimonial-track {
+display: flex;
+transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.testimonial-slide {
+min-width: 100%;
+padding: 0 12px;
+}
+.testimonial-card {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+padding: 32px;
+max-width: 700px;
+margin: 0 auto;
+box-shadow: var(--shadow-sm);
+}
+.testimonial-card .stars {
+color: #f59e0b;
+font-size: 1.1rem;
+margin-bottom: 12px;
+letter-spacing: 2px;
+}
+.testimonial-card .text {
+color: var(--text-secondary);
+font-size: 0.95rem;
+line-height: 1.7;
+font-style: italic;
+margin-bottom: 20px;
+}
+.testimonial-card .author {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.testimonial-card .author .avatar {
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--accent), #1d4ed8);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+font-size: 1rem;
+color: #fff;
+}
+.testimonial-card .author .info h6 {
+font-size: 0.9rem;
+font-weight: 600;
+margin: 0;
+}
+.testimonial-card .author .info span {
+font-size: 0.78rem;
+color: var(--text-muted);
+}
+
+.slider-controls {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+margin-top: 32px;
+}
+.slider-btn {
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+color: var(--text-secondary);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: var(--transition);
+cursor: pointer;
+}
+.slider-btn:hover {
+background: var(--accent);
+border-color: var(--accent);
+color: #fff;
+}
+.slider-dots {
+display: flex;
+gap: 8px;
+}
+.slider-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--text-muted);
+border: none;
+cursor: pointer;
+transition: var(--transition);
+padding: 0;
+}
+.slider-dot.active {
+background: var(--accent-light);
+width: 28px;
+border-radius: 4px;
+}
+
+/* ============================================
+FAQ / COMMON ISSUES
+============================================ */
+.faq-category {
+margin-bottom: 40px;
+}
+.faq-category h3 {
+font-size: 1.15rem;
+font-weight: 700;
+margin-bottom: 20px;
+color: var(--accent-light);
+}
+.accordion-item {
+background: var(--bg-secondary) !important;
+border: 1px solid var(--glass-border) !important;
+border-radius: var(--radius-sm) !important;
+margin-bottom: 8px;
+overflow: hidden;
+}
+.accordion-button {
+background: var(--bg-secondary) !important;
+color: var(--text-primary) !important;
+font-weight: 500;
+font-size: 0.9rem;
+padding: 16px 20px;
+box-shadow: none !important;
+border-radius: var(--radius-sm) !important;
+}
+.accordion-button:not(.collapsed) {
+background: rgba(37, 99, 235, 0.04) !important;
+border-bottom: 1px solid var(--glass-border);
+}
+.accordion-button::after {
+filter: none;
+}
+.accordion-body {
+color: var(--text-secondary);
+font-size: 0.85rem;
+padding: 16px 20px;
+}
+
+/* ============================================
+ABOUT SECTION
+============================================ */
+.about-photo {
+width: 100%;
+max-width: 320px;
+aspect-ratio: 1;
+border-radius: var(--radius-lg);
+overflow: hidden;
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+box-shadow: var(--shadow-sm);
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+}
+.about-photo img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+background: #f0f2f5;
+}
+.about-photo .placeholder {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: var(--text-muted);
+}
+.about-photo .placeholder i {
+font-size: 4rem;
+color: #CBD5E1;
+margin-bottom: 8px;
+}
+.about-photo .placeholder span {
+font-size: 0.8rem;
+font-weight: 300;
+}
+
+.about-text ul {
+list-style: none;
+padding: 0;
+}
+.about-text ul li {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+padding: 8px 0;
+color: var(--text-secondary);
+font-size: 0.92rem;
+}
+.about-text ul li i {
+color: var(--accent-green);
+font-size: 1rem;
+margin-top: 4px;
+flex-shrink: 0;
+}
+
+/* ============================================
+CONTACT / FORM
+============================================ */
+.contact-form-wrap {
+background: var(--bg-secondary);
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-lg);
+padding: 40px;
+box-shadow: var(--shadow-sm);
+}
+.contact-form-wrap .form-control,
+.contact-form-wrap .form-select {
+background: var(--bg-primary);
+border: 1px solid var(--glass-border);
+border-radius: 12px;
+color: var(--text-primary);
+padding: 14px 18px;
+font-size: 0.9rem;
+font-family: 'Inter', sans-serif;
+transition: var(--transition);
+}
+.contact-form-wrap .form-control:focus,
+.contact-form-wrap .form-select:focus {
+background: #fff;
+border-color: var(--accent);
+box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+color: var(--text-primary);
+}
+.contact-form-wrap .form-control::placeholder {
+color: var(--text-muted);
+}
+.contact-form-wrap textarea.form-control {
+min-height: 110px;
+resize: vertical;
+}
+.contact-form-wrap .form-label {
+font-size: 0.85rem;
+font-weight: 500;
+color: var(--text-secondary);
+margin-bottom: 6px;
+}
+
+.contact-info-links {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+justify-content: center;
+margin-top: 24px;
+}
+.contact-info-links a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 10px 20px;
+border-radius: 12px;
+background: var(--bg-primary);
+border: 1px solid var(--glass-border);
+color: var(--text-primary);
+text-decoration: none;
+font-size: 0.9rem;
+font-weight: 500;
+transition: var(--transition);
+}
+.contact-info-links a:hover {
+border-color: var(--glass-border-hover);
+background: rgba(37, 99, 235, 0.04);
+transform: translateY(-2px);
+}
+.contact-info-links a i {
+font-size: 1.1rem;
+}
+
+/* ============================================
+FOOTER
+============================================ */
+footer {
+background: var(--bg-secondary);
+border-top: 1px solid var(--glass-border);
+padding: 60px 0 32px;
+}
+footer .logo-text {
+font-weight: 800;
+font-size: 1.2rem;
+color: var(--text-primary);
+}
+footer .logo-sub {
+font-size: 0.7rem;
+color: var(--text-muted);
+}
+footer p {
+color: var(--text-muted);
+font-size: 0.85rem;
+}
+footer a {
+color: var(--text-secondary);
+text-decoration: none;
+transition: var(--transition);
+}
+footer a:hover { color: var(--accent); }
+footer .social-links {
+display: flex;
+gap: 12px;
+}
+footer .social-links a {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: var(--bg-primary);
+border: 1px solid var(--glass-border);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--text-secondary);
+transition: var(--transition);
+}
+footer .social-links a:hover {
+background: var(--accent);
+border-color: var(--accent);
+color: #fff;
+transform: translateY(-2px);
+}
+footer hr {
+border-color: var(--glass-border);
+margin: 28px 0;
+}
+footer .copyright {
+color: var(--text-muted);
+font-size: 0.78rem;
+}
+
+/* ============================================
+ADAPTIVE CONTAINER
+============================================ */
+.container {
+max-width: var(--container-max);
+padding-left: 24px;
+padding-right: 24px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* ============================================
+ADAPTIVE SECTION BORDERS
+============================================ */
+section {
+padding: var(--section-padding) 0;
+position: relative;
+}
+/* Section separator — gradient border between blocks */
+section:last-of-type { border-bottom: none; }
+
+/* Section with top accent border */
+section.accent-top {
+border-top: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+/* Watermark stamp — logo in bottom-left corner of sections */
+section.watermark::after {
+content: '';
+position: absolute;
+bottom: 20px;
+left: 20px;
+width: 59px;
+height: 59px;
+background: url('assets/logo.webp') no-repeat center/contain;
+opacity: 0.5;
+pointer-events: none;
+z-index: 1;
+}
+section.watermark > .container {
+padding-left: clamp(80px, 6vw, 100px);
+}
+.hero.watermark::after {
+z-index: 2;
+}
+@media (max-width: 768px) {
+section.watermark::after {
+width: 39px;
+height: 39px;
+bottom: 10px;
+left: 10px;
+opacity: 0.5;
+}
+section.watermark > .container {
+padding-left: clamp(50px, 10vw, 60px);
+}
+}
+
+/* Adaptive card borders */
+.service-card,
+.pricing-card,
+.advantage-card,
+.glass-card,
+.contact-form-wrap,
+.timeline-item .content {
+border: 1px solid var(--glass-border);
+transition: var(--transition);
+}
+.service-card:hover,
+.pricing-card:hover,
+.advantage-card:hover,
+.glass-card:hover {
+border-color: var(--glass-border-hover);
+}
+
+/* ============================================
+RESPONSIVE BREAKPOINTS
+============================================ */
+
+/* -------- Phones < 576px -------- */
+@media (max-width: 575.98px) {
+.navbar .logo-text { font-size: 1rem; }
+.navbar-brand img { height: 40px !important; width: 40px !important; }
+.brand-title { font-size: 0.9rem !important; letter-spacing: 0.04em !important; }
+
+.hero { padding: 20px 0 40px; text-align: center; }
+.hero h1 { font-size: 1.5rem; }
+.hero p { font-size: 0.88rem; margin-left: auto; margin-right: auto; }
+.hero .d-flex.flex-wrap { justify-content: center; }
+.hero .btn-accent,
+.hero .btn-green,
+.hero .btn-outline-accent {
+padding: 10px 18px;
+font-size: 0.82rem;
+flex: 1;
+min-width: 0;
+}
+.hero .photo-frame { max-width: 220px; margin: 24px auto 0; }
+
+.service-card { padding: 24px 18px; }
+.service-card .icon-box { width: 44px; height: 44px; }
+.service-card .icon-box i { font-size: 1.15rem; }
+.service-card h3 { font-size: 0.95rem; }
+.service-card ul li { font-size: 0.8rem; padding: 4px 0; }
+
+.advantage-card { padding: 18px 16px; gap: 12px; }
+.advantage-card .check { width: 30px; height: 30px; min-width: 30px; }
+.advantage-card .check i { font-size: 0.8rem; }
+.advantage-card h4 { font-size: 0.88rem; }
+
+.timeline { padding-left: 28px; }
+.timeline::before { left: 8px; }
+.timeline-item .dot { left: -22px; width: 22px; height: 22px; font-size: 0.6rem; }
+.timeline-item { padding-bottom: 20px; }
+.timeline-item .content { padding: 14px 16px; }
+.timeline-item .content h5 { font-size: 0.85rem; }
+.timeline-item .content p { font-size: 0.78rem; }
+
+.pricing-card { padding: 24px 18px; }
+.pricing-card .price { font-size: 1.4rem; }
+.pricing-card .price-icon { width: 44px; height: 44px; }
+.pricing-card .price-icon i { font-size: 1.15rem; }
+.pricing-card h4 { font-size: 0.9rem; }
+.pricing-card ul li { font-size: 0.78rem; }
+
+.brand-item { font-size: 0.7rem; min-height: 44px; padding: 10px 8px; }
+
+.testimonial-card { padding: 20px 16px; }
+.testimonial-card .stars { font-size: 0.9rem; }
+.testimonial-card .text { font-size: 0.85rem; }
+.slider-btn { width: 36px; height: 36px; font-size: 0.8rem; }
+.slider-dot { width: 6px; height: 6px; }
+.slider-dot.active { width: 20px; }
+
+.contact-form-wrap { padding: 20px; }
+.contact-form-wrap .form-control { padding: 11px 14px; font-size: 0.82rem; }
+.contact-info-links { flex-direction: column; align-items: stretch; }
+.contact-info-links a { justify-content: center; font-size: 0.82rem; padding: 10px 16px; }
+
+.about-photo { max-width: 180px; }
+.about-text ul li { font-size: 0.82rem; padding: 6px 0; }
+
+.section-header { margin-bottom: 32px; }
+.section-header h2 { font-size: 1.35rem; }
+.section-header p { font-size: 0.85rem; }
+.section-header .label { font-size: 0.65rem; padding: 3px 12px; }
+
+.floating-phone { bottom: 16px; right: 16px; width: 50px; height: 50px; font-size: 1.25rem; }
+
+footer { padding: 40px 0 24px; }
+footer .logo-text { font-size: 1rem; }
+}
+
+/* -------- Small phones < 400px -------- */
+@media (max-width: 400px) {
+.navbar-brand img { height: 36px !important; width: 36px !important; }
+.hero h1 { font-size: 1.3rem; }
+.hero p { font-size: 0.82rem; }
+.hero .btn-accent,
+.hero .btn-green,
+.hero .btn-outline-accent {
+font-size: 0.75rem;
+padding: 8px 12px;
+}
+.hero .photo-frame { max-width: 180px; }
+.service-card { padding: 18px 14px; }
+.pricing-card { padding: 20px 14px; }
+.contact-form-wrap { padding: 16px; }
+}
+
+/* -------- Tablets 576-767px -------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+.navbar .logo-text { font-size: 1.15rem; }
+.navbar .logo-sub { font-size: 0.65rem; }
+.navbar-brand img { height: 44px !important; width: 44px !important; }
+
+.hero { padding: 30px 0 50px; text-align: center; }
+.hero h1 { font-size: 1.7rem; }
+.hero p { margin-left: auto; margin-right: auto; }
+.hero .photo-frame { max-width: 260px; margin: 28px auto 0; }
+
+.service-card { padding: 28px 20px; }
+.advantage-card { padding: 20px 18px; }
+.pricing-card { padding: 28px 22px; }
+.timeline { padding-left: 32px; }
+.timeline::before { left: 10px; }
+.timeline-item .dot { left: -24px; width: 24px; height: 24px; font-size: 0.62rem; }
+.contact-form-wrap { padding: 28px; }
+.about-photo { max-width: 200px; }
+
+.section-header { margin-bottom: 40px; }
+}
+
+/* -------- Large tablets / small laptops 768-991px -------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+.navbar .logo-text { font-size: 1.2rem; }
+
+.hero { padding: 40px 0 60px; }
+.hero h1 { font-size: 2rem; }
+.hero .photo-frame { max-width: 280px; margin-top: 32px; }
+
+.service-card { padding: 28px 22px; }
+.advantage-card { padding: 22px 20px; }
+.pricing-card { padding: 30px 24px; }
+.contact-form-wrap { padding: 32px; }
+.about-photo { max-width: 220px; }
+
+.section-header { margin-bottom: 48px; }
+}
+
+/* -------- Desktop 992-1199px -------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.hero h1 { font-size: 2.4rem; }
+.hero .photo-frame { max-width: 340px; }
+.service-card { padding: 30px 24px; }
+}
+
+/* -------- Large desktop 1200px+ -------- */
+@media (min-width: 1200px) {
+.hero h1 { font-size: 3rem; }
+}
+
+/* -------- Extra large 1600px+ -------- */
+@media (min-width: 1600px) {
+:root { --container-max: 1400px; }
+.hero h1 { font-size: 3.2rem; }
+.section-header { margin-bottom: 72px; }
+}
+
+/* -------- Landscape orientation on phones -------- */
+@media (max-height: 500px) and (orientation: landscape) {
+.hero { min-height: auto; padding: 20px 0 40px; }
+.hero .photo-frame { max-width: 160px; }
+.navbar-brand img { height: 36px !important; width: 36px !important; }
+}
+
+/* ============================================
+FLOATING PHONE BUTTON (Mobile)
+============================================ */
+/* Floating messengers panel */
+.floating-messengers {
+position: fixed;
+bottom: 24px;
+left: 24px;
+display: flex;
+z-index: 1060;
+padding: 8px;
+background: rgba(255,255,255,0.95);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(0,0,0,0.06);
+border-radius: 16px;
+box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+.floating-messengers a {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.4rem;
+text-decoration: none;
+transition: all 0.2s ease;
+}
+.floating-messengers a:active { transform: scale(0.92); }
+.floating-messengers .fm-telegram { background: #0088cc; color: #fff; }
+@media (min-width: 768px) {
+.floating-messengers { display: none; }
+}
+
+/* Floating Avito badge (Top-right) */
+.floating-avito {
+position: fixed;
+top: 105px;
+right: 24px;
+z-index: 1050;
+background: rgba(255,255,255,0.95);
+border: 1px solid rgba(0,0,0,0.08);
+border-radius: 50px;
+padding: 8px 18px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+backdrop-filter: blur(12px);
+display: flex;
+align-items: center;
+gap: 10px;
+text-decoration: none;
+color: #0F172A;
+font-size: 0.85rem;
+transition: all 0.3s ease;
+}
+.floating-avito:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.floating-avito .stars {
+color: #ffcc00;
+font-size: 0.9rem;
+line-height: 1;
+}
+.floating-avito .rating {
+font-weight: 700;
+color: #0F172A;
+}
+.floating-avito .count {
+color: #64748B;
+}
+
+@media (max-width: 767.98px) {
+.floating-avito {
+top: 95px;
+right: 12px;
+padding: 4px 10px;
+gap: 4px;
+font-size: 0.7rem;
+border-radius: 30px;
+}
+.floating-avito img {
+width: 18px !important;
+height: 18px !important;
+}
+.floating-avito .stars {
+width: 0.85rem;
+overflow: hidden;
+white-space: nowrap;
+display: inline-block;
+font-size: 0.75rem;
+}
+.floating-avito .count { display: none; }
+}
+
+/* Counters */
+.counter-item { padding: 20px 10px; }
+.counter-number {
+font-size: clamp(2.2rem, 4vw, 3.2rem);
+font-weight: 800;
+color: var(--accent);
+line-height: 1;
+display: inline;
+}
+.counter-suffix {
+font-size: clamp(1.8rem, 3vw, 2.5rem);
+font-weight: 800;
+color: var(--accent);
+display: inline;
+margin-left: 2px;
+}
+.counter-label {
+font-size: 0.85rem;
+color: var(--text-secondary);
+margin-top: 6px;
+font-weight: 500;
+}
+
+/* Map section */
+.map-wrap {
+border-radius: var(--radius-lg);
+overflow: hidden;
+border: 1px solid var(--glass-border);
+box-shadow: var(--shadow-sm);
+background: var(--bg-secondary);
+}
+.map-placeholder {
+width: 100%;
+aspect-ratio: 16/7;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: var(--bg-tertiary);
+color: var(--text-muted);
+gap: 8px;
+}
+.map-placeholder i { font-size: 2.5rem; }
+.map-placeholder span { font-size: 0.9rem; }
+@media (max-width: 575.98px) {
+.map-placeholder { aspect-ratio: 4/3; }
+}
+
+.floating-phone {
+position: fixed;
+bottom: 24px;
+right: 24px;
+width: 56px;
+height: 56px;
+border-radius: 50%;
+background: var(--accent);
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4);
+z-index: 1060;
+transition: var(--transition);
+animation: pulseGlow 2.5s infinite;
+text-decoration: none;
+}
+.floating-phone:hover {
+background: var(--accent-light);
+color: #fff;
+transform: scale(1.08);
+}
+@media (min-width: 992px) {
+.floating-phone { display: none; }
+}
+</style>
+</head>
+<body>
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "Ремонт духовых шкафов и варочных панелей — Лучше звоните Лёше",
+"description": "Частный мастер по ремонту электрических духовых шкафов и варочных панелей. Выезд в день обращения. Гарантия до 1 года.",
+"telephone": "+7-XXX-XXX-XX-XX",
+"email": "info@example.com",
+"url": "https://fedosis.github.io/landings/oven-repair/",
+"image": "",
+"priceRange": "₽₽",
+"areaServed": { "@type": "City", "name": "Москва" },
+"openingHoursSpecification": [
+{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "21:00" }
+],
+"hasOfferCatalog": {
+"@type": "OfferCatalog",
+"name": "Услуги по ремонту",
+"itemListElement": [
+{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Диагностика неисправности" } },
+{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт духового шкафа" } },
+{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт варочной панели" } },
+{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Замена ТЭНа" } },
+{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт электронного модуля" } }
+]
+}
+}
+</script>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2 gap-sm-3" href="#hero">
+<img src="assets/logo.webp" alt="Лучше звоните Лёше" class="rounded-circle" style="height:48px;width:48px;object-fit:cover;">
+<span class="brand-title">Лучше звоните Лёше!</span>
+</a>
+
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+<li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+<li class="nav-item"><a class="nav-link" href="#pricing">Цены</a></li>
+<li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+<li class="nav-item ms-lg-2">
+<a class="btn-cta-nav" href="tel:+7XXX">
+<i class="bi bi-telephone-fill me-1"></i> Позвонить
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section class="hero watermark" id="hero">
+<div class="hero-bg">
+<img src="assets/master-photo.webp" alt="" loading="lazy" aria-hidden="true">
+</div>
+<div class="container position-relative" style="z-index: 2;">
+<div class="row align-items-center g-5">
+<div class="col-lg-7">
+<div class="d-flex flex-wrap gap-2 mb-3 reveal">
+<span class="hero-badge mb-0">
+<i class="bi bi-shield-check"></i> Частный мастер · Гарантия до 1 года
+</span>
+<span class="hero-badge mb-0" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.25);color:#22C55E;">
+<i class="bi bi-clock-fill"></i> ⏱ Выезд в день обращения
+</span>
+</div>
+<h1 class="reveal" style="transition-delay: 0.1s;">
+Ремонт электрических духовых шкафов и варочных панелей <span class="highlight">с гарантией до 1 года</span>
+</h1>
+<div class="text-center mt-4 reveal" style="transition-delay: 0.3s;">
+<a href="tel:+7XXX" class="btn btn-accent btn-icon px-5 py-2" style="font-size:1rem;">
+<i class="bi bi-telephone-fill"></i> Позвонить
+</a>
+
+</div>
+
+<div class="col-lg-5">
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" id="services" style="background: var(--bg-primary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Что ремонтирую</span>
+<h2>Профессиональный ремонт любой сложности</h2>
+<p>Более 7 лет опыта в ремонте электрических духовых шкафов и варочных панелей</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-6 reveal-left">
+<div class="service-card" style="background: linear-gradient(135deg, #fff 60%, rgba(37,99,235,0.03));">
+<div class="row align-items-center g-4">
+<div class="col-md-7">
+<div class="icon-box"><i class="bi bi-thermometer-high"></i></div>
+<h3>Электрические духовые шкафы</h3>
+<ul>
+<li>Не нагреваются</li>
+<li>Не включаются</li>
+<li>Выбивает автомат</li>
+<li>Не работают режимы</li>
+<li>Не работает конвекция</li>
+<li>Не работает подсветка</li>
+<li>Ошибки на дисплее</li>
+<li>Замена ТЭНов</li>
+<li>Замена термостатов</li>
+<li>Ремонт модулей управления</li>
+</ul>
+</div>
+<div class="col-md-5 d-flex align-items-center justify-content-center" style="background:#f8f9fa;border-radius:16px;min-height:200px;">
+<img src="assets/oven-service.webp" alt="Ремонт духового шкафа" class="rounded-4" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-6 reveal-right">
+<div class="service-card" style="background: linear-gradient(135deg, #fff 60%, rgba(34,197,94,0.03));">
+<div class="row align-items-center g-4">
+<div class="col-md-7">
+<div class="icon-box"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+<h3>Электрические варочные панели</h3>
+<ul>
+<li>Не включается</li>
+<li>Не работают конфорки</li>
+<li>Не реагирует сенсор</li>
+<li>Самопроизвольное отключение</li>
+<li>Ошибки на дисплее</li>
+<li>Замена стеклокерамики</li>
+<li>Ремонт силовых модулей</li>
+<li>Замена конфорок</li>
+<li>Ремонт электронных плат</li>
+</ul>
+</div>
+<div class="col-md-5 d-flex align-items-center justify-content-center" style="background:#f8f9fa;border-radius:16px;min-height:200px;">
+<img src="assets/hob-service.webp" alt="Ремонт варочной панели" class="rounded-4" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-primary); padding-top: 0;">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Почему выбирают меня</span>
+<h2>Работаю честно и профессионально</h2>
+<p>Никаких скрытых доплат, навязанных услуг и посредников</p>
+</div>
+
+<div class="row g-3">
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.05s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Частный мастер</h4>
+<p>Работаю напрямую, без посредников и диспетчеров</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.1s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Без посредников</h4>
+<p>Вы общаетесь напрямую со мной — никаких наценок</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.15s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Честная диагностика</h4>
+<p>Без ложных поломок и завышения стоимости работ</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.2s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Не навязываю лишний ремонт</h4>
+<p>Только то, что действительно нужно исправить</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.25s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Работаю аккуратно</h4>
+<p>Чистота и порядок после ремонта гарантирую</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.3s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Гарантия до 1 года</h4>
+<p>Даю письменную гарантию на все виды ремонта</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.35s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Профессиональное оборудование</h4>
+<p>Современные приборы для точной диагностики</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal" style="transition-delay: 0.4s;">
+<div class="advantage-card">
+<div class="check"><i class="bi bi-check-lg"></i></div>
+<div>
+<h4>Большой опыт</h4>
+<p>Специализируюсь именно на духовых шкафах и панелях</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-tertiary); padding: 60px 0;">
+<div class="container">
+<div class="row g-4 text-center">
+<div class="col-6 col-lg-3 counter-item reveal">
+<div class="counter-number" data-target="7">0</div>
+<div class="counter-suffix">+</div>
+<div class="counter-label">лет опыта</div>
+</div>
+<div class="col-6 col-lg-3 counter-item reveal" style="transition-delay:0.1s;">
+<div class="counter-number" data-target="500">0</div>
+<div class="counter-suffix">+</div>
+<div class="counter-label">выполненных ремонтов</div>
+</div>
+<div class="col-6 col-lg-3 counter-item reveal" style="transition-delay:0.2s;">
+<div class="counter-number" data-target="20">0</div>
+<div class="counter-suffix">+</div>
+<div class="counter-label">брендов техники</div>
+</div>
+<div class="col-6 col-lg-3 counter-item reveal" style="transition-delay:0.3s;">
+<div class="counter-number" data-target="1">0</div>
+<div class="counter-suffix"></div>
+<div class="counter-label">год гарантии</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-primary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Как проходит ремонт</span>
+<h2>8 простых шагов до полностью исправной техники</h2>
+<p>Прозрачный процесс — от заявки до гарантии</p>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="timeline">
+<div class="timeline-item reveal">
+<div class="dot">1</div>
+<div class="content">
+<h5>Вы оставляете заявку</h5>
+<p>Позвоните, напишите в мессенджер или заполните форму на сайте</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">2</div>
+<div class="content">
+<h5>Созваниваемся и уточняем симптомы</h5>
+<p>Я задам несколько вопросов, чтобы понять характер неисправности и взять нужные запчасти</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">3</div>
+<div class="content">
+<h5>Приезжаю в удобное время</h5>
+<p>Выезд в день обращения в большинстве случаев</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">4</div>
+<div class="content">
+<h5>Провожу диагностику</h5>
+<p>С помощью профессионального оборудования точно определяю причину поломки</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">5</div>
+<div class="content">
+<h5>Озвучиваю стоимость</h5>
+<p>Называю точную цену ремонта. Только после вашего согласия приступаю к работе</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">6</div>
+<div class="content">
+<h5>Выполняю ремонт</h5>
+<p>Большинство неисправностей устраняю на дому с использованием качественных запчастей</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">7</div>
+<div class="content">
+<h5>Проверяем работу техники</h5>
+<p>Вместе убеждаемся, что всё работает исправно</p>
+</div>
+</div>
+<div class="timeline-item reveal">
+<div class="dot">8</div>
+<div class="content">
+<h5>Вы получаете гарантию</h5>
+<p>Предоставляю письменную гарантию до 1 года на выполненные работы</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" id="pricing">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Стоимость</span>
+<h2>Прозрачные цены без скрытых платежей</h2>
+<p>Итоговая стоимость зависит от сложности ремонта и необходимых запчастей</p>
+</div>
+
+<div class="pricing-grid">
+<div class="reveal" style="transition-delay: 0.05s;">
+<div class="pricing-card">
+<div class="price-icon"><i class="bi bi-search-heart"></i></div>
+<h4>Диагностика</h4>
+<div class="price">от 0 ₽</div>
+<div class="price-unit">при заказе ремонта</div>
+<ul>
+<li><i class="bi bi-check-circle"></i> Точная диагностика оборудования</li>
+<li><i class="bi bi-check-circle"></i> Выявление скрытых неисправностей</li>
+<li><i class="bi bi-check-circle"></i> Бесплатно при согласии на ремонт</li>
+</ul>
+<a href="#contact" class="btn btn-accent w-100">Заказать</a>
+</div>
+</div>
+
+<div class="reveal" style="transition-delay: 0.1s;">
+<div class="pricing-card">
+<div class="price-icon"><i class="bi bi-thermometer-high"></i></div>
+<h4>Ремонт духового шкафа</h4>
+<div class="price">от 1 500 ₽</div>
+<div class="price-unit">+ стоимость запчастей</div>
+<ul>
+<li><i class="bi bi-check-circle"></i> Замена ТЭНов</li>
+<li><i class="bi bi-check-circle"></i> Ремонт модуля управления</li>
+<li><i class="bi bi-check-circle"></i> Замена термостата</li>
+<li><i class="bi bi-check-circle"></i> Устранение ошибок дисплея</li>
+</ul>
+<a href="#contact" class="btn btn-accent w-100">Заказать</a>
+</div>
+</div>
+
+<div class="reveal" style="transition-delay: 0.15s;">
+<div class="pricing-card">
+<div class="price-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+<h4>Ремонт варочной панели</h4>
+<div class="price">от 1 500 ₽</div>
+<div class="price-unit">+ стоимость запчастей</div>
+<ul>
+<li><i class="bi bi-check-circle"></i> Замена стеклокерамики</li>
+<li><i class="bi bi-check-circle"></i> Ремонт сенсора</li>
+<li><i class="bi bi-check-circle"></i> Замена конфорок</li>
+<li><i class="bi bi-check-circle"></i> Ремонт силового модуля</li>
+</ul>
+<a href="#contact" class="btn btn-accent w-100">Заказать</a>
+</div>
+</div>
+
+<div class="reveal" style="transition-delay: 0.2s;">
+<div class="pricing-card">
+<div class="price-icon"><i class="bi bi-droplet-half"></i></div>
+<h4>Замена ТЭНа</h4>
+<div class="price">от 1 200 ₽</div>
+<div class="price-unit">+ стоимость запчастей</div>
+<ul>
+<li><i class="bi bi-check-circle"></i> Демонтаж старого ТЭНа</li>
+<li><i class="bi bi-check-circle"></i> Установка нового</li>
+<li><i class="bi bi-check-circle"></i> Проверка нагрева</li>
+</ul>
+<a href="#contact" class="btn btn-accent w-100">Заказать</a>
+</div>
+</div>
+
+<div class="reveal" style="transition-delay: 0.25s;">
+<div class="pricing-card">
+<div class="price-icon"><i class="bi bi-cpu"></i></div>
+<h4>Ремонт электронного модуля</h4>
+<div class="price">от 2 500 ₽</div>
+<div class="price-unit">+ стоимость запчастей</div>
+<ul>
+<li><i class="bi bi-check-circle"></i> Диагностика платы</li>
+<li><i class="bi bi-check-circle"></i> Перепайка элементов</li>
+<li><i class="bi bi-check-circle"></i> Замена микросхем</li>
+<li><i class="bi bi-check-circle"></i> Программирование модуля</li>
+</ul>
+<a href="#contact" class="btn btn-accent w-100">Заказать</a>
+</div>
+</div>
+
+<div class="pricing-placeholder" style="visibility:hidden;">
+<div class="pricing-card" style="border-color:transparent;box-shadow:none;background:transparent;">
+<div class="price-icon" style="background:transparent;"><i style="opacity:0;">.</i></div>
+<h4 style="opacity:0;">_</h4>
+<div class="price" style="opacity:0;">_</div>
+<div class="price-unit" style="opacity:0;">_</div>
+<ul style="opacity:0;"><li>_</li></ul>
+</div>
+</div>
+</div>
+
+<div class="pricing-note reveal">
+<i class="bi bi-info-circle me-2"></i> Точная стоимость определяется после диагностики. Цены указаны ориентировочно.
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-primary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Какие бренды ремонтирую</span>
+<h2>Более 20 известных производителей</h2>
+<p>Работаю с любой техникой — от бюджетных до премиальных брендов</p>
+</div>
+
+<div class="brands-grid">
+<div class="reveal-scale"><div class="brand-item"><img src="assets/top-bosch.webp" alt="Bosch"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.03s;"><div class="brand-item"><img src="assets/top-siemens.webp" alt="Siemens"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.06s;"><div class="brand-item"><img src="assets/top-aeg.webp" alt="AEG"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.09s;"><div class="brand-item"><img src="assets/top-electrolux.webp" alt="Electrolux"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.12s;"><div class="brand-item"><img src="assets/top-samsung.webp" alt="Samsung"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.15s;"><div class="brand-item"><img src="assets/top-lg.webp" alt="LG"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.18s;"><div class="brand-item"><img src="assets/top-whirlpool.webp" alt="Whirlpool"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.21s;"><div class="brand-item"><img src="assets/top-indesit.webp" alt="Indesit"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.24s;"><div class="brand-item"><img src="assets/top-hotpoint-ariston.webp" alt="Hotpoint-Ariston"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.27s;"><div class="brand-item"><img src="assets/top-beko.webp" alt="Beko"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.3s;"><div class="brand-item"><img src="assets/top-candy.webp" alt="Candy"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.33s;"><div class="brand-item"><img src="assets/top-haier.webp" alt="Haier"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.36s;"><div class="brand-item"><img src="assets/top-miele.webp" alt="Miele"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.39s;"><div class="brand-item"><img src="assets/top-gorenje.webp" alt="Gorenje"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.42s;"><div class="brand-item"><img src="assets/top-zanussi.webp" alt="Zanussi"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.45s;"><div class="brand-item"><img src="assets/top-neff.webp" alt="Neff"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.48s;"><div class="brand-item"><img src="assets/top-smeg.webp" alt="Smeg"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.51s;"><div class="brand-item">KUPPERSBERG</div></div>
+<div class="reveal-scale" style="transition-delay: 0.54s;"><div class="brand-item"><img src="assets/top-hansa.webp" alt="Hansa"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.57s;"><div class="brand-item"><img src="assets/top-kaiser.webp" alt="Kaiser"></div></div>
+<div class="reveal-scale" style="transition-delay: 0.6s;"><div class="brand-item">MAUNFELD</div></div>
+<div class="reveal-scale" style="transition-delay: 0.63s;"><div class="brand-item"><span style="font-weight:400;font-size:0.8rem;">···и другие</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-tertiary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Портфолио</span>
+<h2>Примеры выполненных работ</h2>
+<p>Реальные фото ремонта духовых шкафов и варочных панелей</p>
+</div>
+
+<div class="row g-4" id="worksGrid">
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(0)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-01.webp" alt="Замена ТЭНа духового шкафа NEFF" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена ТЭНа духового шкафа</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">NEFF</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(1)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-02.webp" alt="Замена контрольной платы духового шкафа" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена контрольной платы</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">NEFF</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(2)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-03.webp" alt="Замена ТЭНа варочной панели Samsung" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена ТЭНа</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">Samsung</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(3)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-04.webp" alt="Замена селектора и восстановление проводки Bosch" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена селектора и восстановление проводки</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">Bosch</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(4)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-05.webp" alt="Замена селектора варочной панели Bosch" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена селектора</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">Bosch</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(5)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-06.webp" alt="Замена двух селекторов Дарина" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Замена двух селекторов</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">Дарина</span>
+</div>
+</div>
+</div>
+
+<div class="col-12">
+<div class="work-item-featured reveal d-flex flex-column flex-md-row align-items-center gap-4 p-3 p-md-4" onclick="openLightbox(6)" style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);">
+<div class="work-image-wrap flex-shrink-0" style="width:100%;max-width:400px;aspect-ratio:3/4;overflow:hidden;border-radius:var(--radius-md);position:relative;">
+<img src="assets/works/work-07.webp" alt="Восстановление проводки, замена предохранителей Дарина" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#f0f2f5;">
+</div>
+<div class="flex-grow-1 text-center text-md-start">
+<span class="work-title d-block" style="font-size:1.2rem;font-weight:700;color:var(--text-primary);">Восстановление проводки, замена предохранителей</span>
+<span class="work-brand d-block" style="font-size:1rem;color:var(--accent);font-weight:600;margin-top:4px;">Дарина</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+<button class="lb-close" onclick="closeLightbox()">&times;</button>
+<button class="lb-prev" onclick="changeImage(-1)">&#8249;</button>
+<img id="lbImage" src="" alt="">
+<button class="lb-next" onclick="changeImage(1)">&#8250;</button>
+</div>
+
+<section class="watermark" id="reviews">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Отзывы</span>
+<h2>Что говорят клиенты</h2>
+<p>Ваше доверие — лучшая награда</p>
+</div>
+
+<div class="testimonial-slider reveal">
+<div class="testimonial-track" id="testimonialTrack">
+
+<div class="testimonial-slide">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="text">«Отличный мастер! Приехал в день обращения, быстро нашел причину — перегорел ТЭН в духовке. Заменил прямо на дому, все работает отлично. Цена адекватная. Буду рекомендовать знакомым!»</p>
+<div class="author">
+<div class="avatar">А</div>
+<div class="info">
+<h6>Анна</h6>
+<span>Ремонт духового шкафа · Январь 2026</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonial-slide">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="text">«Перестала включаться варочная панель. Думал придется покупать новую, но Алексей быстро нашел проблему в модуле управления. Отремонтировал за час. Очень доволен!»</p>
+<div class="author">
+<div class="avatar">М</div>
+<div class="info">
+<h6>Михаил</h6>
+<span>Ремонт варочной панели · Март 2026</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonial-slide">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="text">«Обращалась уже два раза. Первый раз чинили индукционную панель, второй — духовой шкаф. Оба раза быстро, качественно и с гарантией. Приятно, что мастер не навязывает лишних услуг. Рекомендую!»</p>
+<div class="author">
+<div class="avatar">Е</div>
+<div class="info">
+<h6>Елена</h6>
+<span>Ремонт духового шкафа + панели · Апрель 2026</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonial-slide">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="text">«Духовка перестала греть. Алексей приехал в тот же день, диагностика показала неисправный термостат. Заменил, проверил — всё супер. Цена порадовала, работа аккуратная. Спасибо!»</p>
+<div class="author">
+<div class="avatar">С</div>
+<div class="info">
+<h6>Сергей</h6>
+<span>Замена термостата · Февраль 2026</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonial-slide">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="text">«Профессионал своего дела! После переезда сломалась варочная панель — не реагировал сенсор. Алексей приехал, почистил контакты и всё настроил. Работает как новая. Буду обращаться только к нему.»</p>
+<div class="author">
+<div class="avatar">О</div>
+<div class="info">
+<h6>Ольга</h6>
+<span>Ремонт сенсорной панели · Май 2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="slider-controls">
+<button class="slider-btn" id="prevSlide" aria-label="Предыдущий отзыв">
+<i class="bi bi-chevron-left"></i>
+</button>
+<div class="slider-dots" id="sliderDots">
+<button class="slider-dot active" data-index="0" aria-label="Отзыв 1"></button>
+<button class="slider-dot" data-index="1" aria-label="Отзыв 2"></button>
+<button class="slider-dot" data-index="2" aria-label="Отзыв 3"></button>
+<button class="slider-dot" data-index="3" aria-label="Отзыв 4"></button>
+<button class="slider-dot" data-index="4" aria-label="Отзыв 5"></button>
+</div>
+<button class="slider-btn" id="nextSlide" aria-label="Следующий отзыв">
+<i class="bi bi-chevron-right"></i>
+</button>
+</div>
+</div>
+</section>
+
+<section class="watermark" id="faq" style="background: var(--bg-primary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Частые неисправности</span>
+<h2>С чем чаще всего обращаются</h2>
+<p>Большинство проблем решаются на дому в день обращения</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-6 faq-category reveal-left">
+<h3><i class="bi bi-thermometer-half me-2"></i> Духовой шкаф</h3>
+<div class="accordion" id="faqOven">
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fo1">Не греет</button></h2>
+<div id="fo1" class="accordion-collapse collapse show" data-bs-parent="#faqOven">
+<div class="accordion-body">Наиболее частая причина — выход из строя ТЭНа (нагревательного элемента). Реже — неисправность термостата или модуля управления. Замена ТЭНа или ремонт модуля решает проблему.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo2">Греет слишком слабо</button></h2>
+<div id="fo2" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Обычно проблема в неисправном термостате (датчике температуры) или в том, что один из ТЭНов перегорел. Точная причина определяется после диагностики.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo3">Перегревается</button></h2>
+<div id="fo3" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Неисправность термостата или платы управления. Требуется замена датчика или ремонт электроники.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo4">Выбивает автомат</button></h2>
+<div id="fo4" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Короткое замыкание в нагревательном элементе, проводке или электронном модуле. Требуется срочная диагностика для выявления точной причины.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo5">Не работает вентилятор</button></h2>
+<div id="fo5" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Чаще всего износ подшипников двигателя вентилятора или его обмотки. Требуется замена вентилятора конвекции.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo6">Не включается</button></h2>
+<div id="fo6" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Возможны проблемы с питанием, сгорел предохранитель, неисправен модуль управления или вышел из строя блокировочный выключатель дверцы.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo7">Не работают режимы</button></h2>
+<div id="fo7" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Неисправность переключателя режимов или проблемы с электронным модулем управления.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fo8">Не работает подсветка</button></h2>
+<div id="fo8" class="accordion-collapse collapse" data-bs-parent="#faqOven">
+<div class="accordion-body">Чаще всего перегорела лампа подсветки. Замена лампы или патрона решает проблему.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-6 faq-category reveal-right">
+<h3><i class="bi bi-grid-3x3-gap me-2"></i> Варочная панель</h3>
+<div class="accordion" id="faqHob">
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fh1">Не включается</button></h2>
+<div id="fh1" class="accordion-collapse collapse show" data-bs-parent="#faqHob">
+<div class="accordion-body">Причин может быть несколько: неисправность блока питания, сгоревший предохранитель, проблема с электронным модулем или силовым блоком.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh2">Не работают конфорки</button></h2>
+<div id="fh2" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Может выйти из строя конкретная конфорка, её транзисторный ключ на силовом модуле или плата управления.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh3">Не реагирует сенсор</button></h2>
+<div id="fh3" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Проблемы с сенсорной панелью: загрязнение, отклеивание шлейфа, неисправность сенсорного контроллера на плате.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh4">Не определяется посуда (индукция)</button></h2>
+<div id="fh4" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Индукционная панель не видит посуду — проблема в датчике, силовом модуле или неподходящей посуде. Диагностика определит причину.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh5">Выключается во время работы</button></h2>
+<div id="fh5" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Возможен перегрев, срабатывание защиты, неисправность блока питания или силового модуля.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh6">Показывает ошибку</button></h2>
+<div id="fh6" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Коды ошибок указывают на конкретную неисправность. После диагностики я определяю точную причину и устраняю её.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh7">Треснуло стекло</button></h2>
+<div id="fh7" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Требуется замена стеклокерамики. Выполняется на дому, если есть в наличии подходящая запчасть.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fh8">Не регулируется мощность</button></h2>
+<div id="fh8" class="accordion-collapse collapse" data-bs-parent="#faqHob">
+<div class="accordion-body">Проблема в силовом модуле или плате управления. Требуется диагностика и ремонт электроники.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" id="about">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">О мастере</span>
+<h2>Работаю с душой и отвечаю за качество</h2>
+</div>
+
+<div class="row align-items-center g-5">
+<div class="col-lg-5 text-center">
+<div class="about-photo">
+<img src="assets/master-about.webp" alt="Мастер за работой" class="w-100 h-100" style="object-fit:cover;">
+</div>
+</div>
+<div class="col-lg-7 about-text reveal-right">
+<ul>
+<li><i class="bi bi-check-circle-fill"></i> Более 7 лет опыта ремонта электрических духовых шкафов и варочных панелей</li>
+<li><i class="bi bi-check-circle-fill"></i> Частный мастер без посредников — работаю напрямую с вами</li>
+<li><i class="bi bi-check-circle-fill"></i> Специализируюсь именно на духовых шкафах и варочных панелях</li>
+<li><i class="bi bi-check-circle-fill"></i> Использую профессиональное диагностическое оборудование</li>
+<li><i class="bi bi-check-circle-fill"></i> Даю письменную гарантию до 1 года на все виды работ</li>
+<li><i class="bi bi-check-circle-fill"></i> Выполняю ремонт аккуратно и с соблюдением требований безопасности</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" id="contact" style="background: var(--bg-primary);">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Свяжитесь со мной</span>
+<h2>Оставьте заявку</h2>
+<p>Заполните форму — я перезвоню в течение 15 минут</p>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-lg-8 reveal">
+<div class="contact-form-wrap">
+<form id="contactForm" novalidate>
+<div class="row g-4">
+<div class="col-md-6">
+<label class="form-label" for="name">Ваше имя</label>
+<input type="text" class="form-control" id="name" placeholder="Александр" required>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="phone">Номер телефона</label>
+<input type="tel" class="form-control" id="phone" placeholder="+7 (999) 123-45-67" required>
+</div>
+<div class="col-12">
+<label class="form-label" for="message">Краткое описание неисправности</label>
+<textarea class="form-control" id="message" placeholder="Духовой шкаф не греет, выбивает автомат..." rows="3"></textarea>
+</div>
+<div class="col-12 text-center">
+<button type="submit" class="btn btn-accent btn-icon px-5 py-3" style="font-size:1.05rem;">
+<i class="bi bi-wrench-adjustable"></i> Вызвать мастера
+</button>
+</div>
+</div>
+</form>
+
+<div class="contact-info-links">
+<a href="tel:+7XXX"><i class="bi bi-telephone-fill"></i> +7 (XXX) XXX-XX-XX</a>
+<a href="#"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+<a href="#"><i class="bi bi-telegram"></i> Telegram</a>
+<a href="mailto:info@example.com"><i class="bi bi-envelope-fill"></i> info@example.com</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="watermark" style="background: var(--bg-primary); padding-top: 0;">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Район обслуживания</span>
+<h2>Выезжаю по городу и области</h2>
+<p>Принимаю заявки ежедневно с 9:00 до 21:00</p>
+</div>
+<div class="reveal">
+<div class="map-wrap">
+<div class="map-placeholder">
+<i class="bi bi-geo-alt-fill"></i>
+<span>📍 Карта района обслуживания</span>
+<span style="font-size:0.78rem;color:var(--text-muted);">Выезд по городу и ближайшим пригородам</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-4">
+<div class="d-flex align-items-center gap-3 mb-2">
+<img src="assets/logo.webp" alt="Лучше звоните Лёше" style="height:52px;width:52px;object-fit:cover;border-radius:50%;">
+<div class="d-none d-sm-flex flex-column">
+<span class="logo-text">Лучше звоните Лёше</span>
+<span class="logo-sub">Ремонт духовых шкафов и варочных панелей</span>
+</div>
+</div>
+<p class="mt-3">Частный мастер по ремонту электрических духовых шкафов и варочных панелей. Работаю без посредников. Гарантия до 1 года.</p>
+</div>
+<div class="col-6 col-lg-2">
+<h6 class="fw-600 mb-3" style="font-size:0.85rem;color:var(--text-primary);">Навигация</h6>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="#services">Услуги</a></li>
+<li class="mb-2"><a href="#pricing">Цены</a></li>
+<li class="mb-2"><a href="#reviews">Отзывы</a></li>
+<li class="mb-2"><a href="#faq">Неисправности</a></li>
+<li class="mb-2"><a href="#contact">Контакты</a></li>
+</ul>
+</div>
+<div class="col-6 col-lg-2">
+<h6 class="fw-600 mb-3" style="font-size:0.85rem;color:var(--text-primary);">Услуги</h6>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="#">Ремонт духовых шкафов</a></li>
+<li class="mb-2"><a href="#">Ремонт варочных панелей</a></li>
+<li class="mb-2"><a href="#">Замена ТЭНов</a></li>
+<li class="mb-2"><a href="#">Ремонт модулей</a></li>
+</ul>
+</div>
+<div class="col-lg-4">
+<h6 class="fw-600 mb-3" style="font-size:0.85rem;color:var(--text-primary);">Контакты</h6>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="tel:+7XXX"><i class="bi bi-telephone-fill me-2"></i>+7 (XXX) XXX-XX-XX</a></li>
+<li class="mb-2"><a href="mailto:info@example.com"><i class="bi bi-envelope-fill me-2"></i>info@example.com</a></li>
+</ul>
+<div class="social-links mt-3">
+<a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+<a href="#" aria-label="Viber"><i class="bi bi-phone-vibrate"></i></a>
+</div>
+</div>
+</div>
+<hr>
+<div class="d-flex flex-wrap justify-content-between align-items-center">
+<span class="copyright">© <span id="year"></span> Частный мастер по ремонту духовых шкафов и варочных панелей</span>
+<span class="copyright">Сделано с душой</span>
+</div>
+</div>
+</footer>
+
+<div class="floating-messengers">
+<a href="#" class="fm-telegram" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+</div>
+
+<a href="https://www.avito.ru/user/bfe730753d86ad7cb978c4fb8c50d19e/profile" target="_blank" rel="noopener noreferrer" class="floating-avito">
+<img src="assets/avito-icon.webp" alt="Авито" width="28" height="28" style="border-radius:4px;flex-shrink:0;">
+<span class="stars">★★★★★</span>
+<span class="rating">4.8</span>
+<span class="count">· 20 отзывов</span>
+</a>
+
+<a href="tel:+7XXX" class="floating-phone" aria-label="Позвонить">
+<i class="bi bi-telephone-fill"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+// =====================================================
+// 1. Scroll-triggered Reveal Animations
+// =====================================================
+(function() {
+const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+if ('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+} else {
+reveals.forEach(el => el.classList.add('visible'));
+}
+})();
+
+// =====================================================
+// 2. Navbar background on scroll
+// =====================================================
+(function() {
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+nav.classList.add('scrolled');
+} else {
+nav.classList.remove('scrolled');
+}
+});
+})();
+
+// =====================================================
+// 3. Testimonial Slider
+// =====================================================
+(function() {
+const track = document.getElementById('testimonialTrack');
+const slides = track.querySelectorAll('.testimonial-slide');
+const dots = document.querySelectorAll('#sliderDots .slider-dot');
+const prevBtn = document.getElementById('prevSlide');
+const nextBtn = document.getElementById('nextSlide');
+let current = 0;
+const total = slides.length;
+
+function goTo(index) {
+if (index < 0) index = total - 1;
+if (index >= total) index = 0;
+current = index;
+track.style.transform = 'translateX(-' + (current * 100) + '%)';
+dots.forEach((d, i) => d.classList.toggle('active', i === current));
+}
+
+if (prevBtn && nextBtn && dots.length) {
+prevBtn.addEventListener('click', () => goTo(current - 1));
+nextBtn.addEventListener('click', () => goTo(current + 1));
+dots.forEach(dot => {
+dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
+});
+// Auto-play
+let interval = setInterval(() => goTo(current + 1), 6000);
+const sliderEl = document.querySelector('.testimonial-slider');
+sliderEl.addEventListener('mouseenter', () => clearInterval(interval));
+sliderEl.addEventListener('mouseleave', () => {
+interval = setInterval(() => goTo(current + 1), 6000);
+});
+}
+})();
+
+// =====================================================
+// 4. Animated Counters
+// =====================================================
+(function() {
+const counters = document.querySelectorAll('.counter-number');
+if (!counters.length) return;
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const el = entry.target;
+const target = parseInt(el.dataset.target);
+const duration = 1500;
+const start = performance.now();
+function update(now) {
+const elapsed = now - start;
+const progress = Math.min(elapsed / duration, 1);
+const eased = 1 - Math.pow(1 - progress, 3);
+el.textContent = Math.floor(eased * target);
+if (progress < 1) requestAnimationFrame(update);
+else el.textContent = target;
+}
+requestAnimationFrame(update);
+observer.unobserve(el);
+}
+});
+}, { threshold: 0.5 });
+counters.forEach(el => observer.observe(el));
+})();
+
+// =====================================================
+// 5. (removed — hero image uses contain, no parallax needed)
+// =====================================================
+
+// =====================================================
+// 6. Improved Form Handler
+// =====================================================
+(function() {
+const form = document.getElementById('contactForm');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const name = document.getElementById('name').value.trim();
+const phone = document.getElementById('phone').value.trim();
+const message = document.getElementById('message').value.trim();
+if (!name || !phone) {
+const alertBox = document.createElement('div');
+alertBox.className = 'alert alert-danger mt-3 mb-0 py-2';
+alertBox.style.cssText = 'background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.15);border-radius:10px;color:#dc2626;font-size:0.85rem;';
+alertBox.textContent = 'Пожалуйста, заполните имя и номер телефона.';
+const oldAlert = form.querySelector('.alert');
+if (oldAlert) oldAlert.remove();
+form.appendChild(alertBox);
+setTimeout(() => alertBox.remove(), 3000);
+return;
+}
+const btn = form.querySelector('button[type="submit"]');
+const origText = btn.innerHTML;
+const origBg = btn.style.background;
+btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> Отправляем...';
+btn.disabled = true;
+// Telegram-style simulation with success animation
+setTimeout(() => {
+btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Заявка отправлена!';
+btn.style.background = '#22C55E';
+form.querySelectorAll('.form-control').forEach(f => f.value = '');
+const alertBox = document.createElement('div');
+alertBox.className = 'alert mt-3 mb-0 py-2';
+alertBox.style.cssText = 'background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.15);border-radius:10px;color:#16a34a;font-size:0.85rem;';
+alertBox.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Спасибо! Я свяжусь с вами в ближайшее время.';
+form.appendChild(alertBox);
+setTimeout(() => {
+btn.innerHTML = origText;
+btn.disabled = false;
+btn.style.background = origBg;
+alertBox.remove();
+}, 4000);
+}, 1200);
+});
+}
+})();
+
+// =====================================================
+// 7. Auto year in footer
+// =====================================================
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// =====================================================
+// 8. Smooth dismiss mobile menu on link click
+// =====================================================
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+link.addEventListener('click', function() {
+const collapse = document.getElementById('navMenu');
+if (collapse.classList.contains('show')) {
+const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+if (bsCollapse) bsCollapse.hide();
+}
+});
+});
+
+// =====================================================
+// 9. Lightbox Gallery
+// =====================================================
+(function() {
+const images = [
+'assets/works/work-01.webp',
+'assets/works/work-02.webp',
+'assets/works/work-03.webp',
+'assets/works/work-04.webp',
+'assets/works/work-05.webp',
+'assets/works/work-06.webp',
+'assets/works/work-07.webp'
+];
+let currentIndex = 0;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImage');
+
+window.openLightbox = function(index) {
+currentIndex = index;
+lbImg.src = images[currentIndex];
+lb.classList.add('active');
+document.body.style.overflow = 'hidden';
+};
+
+window.closeLightbox = function(e) {
+if (e && e.target !== e.currentTarget) return;
+lb.classList.remove('active');
+document.body.style.overflow = '';
+};
+
+window.changeImage = function(dir) {
+currentIndex += dir;
+if (currentIndex < 0) currentIndex = images.length - 1;
+if (currentIndex >= images.length) currentIndex = 0;
+lbImg.src = images[currentIndex];
+};
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+if (!lb.classList.contains('active')) return;
+if (e.key === 'Escape') closeLightbox();
+if (e.key === 'ArrowLeft') changeImage(-1);
+if (e.key === 'ArrowRight') changeImage(1);
+});
+})();
+</script>
+</body>
+</html>
