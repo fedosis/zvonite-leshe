@@ -1318,6 +1318,56 @@ font-size: 1.1rem;
 }
 
 /* ============================================
+REQUISITES
+============================================ */
+.requisites {
+background: var(--bg-tertiary);
+padding: 60px 0;
+}
+.requisites .req-card {
+background: var(--bg-secondary);
+border-radius: var(--radius-md);
+padding: 32px;
+border: 1px solid var(--glass-border);
+max-width: 640px;
+margin: 0 auto;
+}
+.requisites .req-card h4 {
+font-weight: 700;
+font-size: 1rem;
+color: var(--text-primary);
+margin-bottom: 20px;
+text-align: center;
+}
+.requisites .req-item {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+padding: 8px 0;
+border-bottom: 1px solid rgba(0,0,0,0.04);
+gap: 16px;
+}
+.requisites .req-item:last-child {
+border-bottom: none;
+}
+.requisites .req-label {
+font-size: 0.78rem;
+font-weight: 600;
+color: var(--text-muted);
+text-transform: uppercase;
+letter-spacing: 0.04em;
+white-space: nowrap;
+min-width: 100px;
+}
+.requisites .req-value {
+font-size: 0.88rem;
+color: var(--text-primary);
+text-align: right;
+word-break: break-all;
+line-height: 1.5;
+}
+
+/* ============================================
 FOOTER
 ============================================ */
 footer {
@@ -2678,6 +2728,51 @@ transform: scale(1.08);
 </div>
 </section>
 
+<section class="requisites watermark" id="requisites">
+<div class="container">
+<div class="section-header reveal">
+<span class="label">Реквизиты</span>
+<h2>Официальные данные</h2>
+<p>Работаю официально, предоставляю закрывающие документы</p>
+</div>
+<div class="req-card reveal">
+<h4>Индивидуальный предприниматель<br>Поздняков Алексей Владимирович</h4>
+<div class="req-item">
+<span class="req-label">ИНН</span>
+<span class="req-value">312342977742</span>
+</div>
+<div class="req-item">
+<span class="req-label">ОГРН</span>
+<span class="req-value">325774600312441</span>
+</div>
+<div class="req-item">
+<span class="req-label">Расчётный счёт</span>
+<span class="req-value">40802810000001329057</span>
+</div>
+<div class="req-item">
+<span class="req-label">Корр. счёт</span>
+<span class="req-value">30101810645374525068</span>
+</div>
+<div class="req-item">
+<span class="req-label">Банк</span>
+<span class="req-value">ООО «ОЗОН Банк»</span>
+</div>
+<div class="req-item">
+<span class="req-label">БИК</span>
+<span class="req-value">044525068</span>
+</div>
+<div class="req-item">
+<span class="req-label">ИНН банка</span>
+<span class="req-value">9703077050</span>
+</div>
+<div class="req-item">
+<span class="req-label">Юр. адрес банка</span>
+<span class="req-value">РФ, 123112, г. Москва,<br>Пресненская наб., дом 10, этаж 19</span>
+</div>
+</div>
+</div>
+</section>
+
 <footer>
 <div class="container">
 <div class="row g-4">
@@ -2698,6 +2793,7 @@ transform: scale(1.08);
 <li class="mb-2"><a href="#pricing">Цены</a></li>
 <li class="mb-2"><a href="#reviews">Отзывы</a></li>
 <li class="mb-2"><a href="#faq">Неисправности</a></li>
+<li class="mb-2"><a href="#requisites">Реквизиты</a></li>
 <li class="mb-2"><a href="#contact">Контакты</a></li>
 </ul>
 </div>
