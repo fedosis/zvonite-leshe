@@ -1582,8 +1582,6 @@ min-width: 0;
 .section-header p { font-size: 0.85rem; }
 .section-header .label { font-size: 0.65rem; padding: 3px 12px; }
 
-.floating-phone { bottom: 16px; right: 16px; width: 50px; height: 50px; font-size: 1.25rem; }
-
 footer { padding: 40px 0 24px; }
 footer .logo-text { font-size: 1rem; }
 }
@@ -1672,38 +1670,35 @@ padding: 8px 12px;
 }
 
 /* ============================================
-FLOATING PHONE BUTTON (Mobile)
+FLOATING PHONE BUTTON (Sticky Bottom)
 ============================================ */
-/* Floating messengers panel */
-.floating-messengers {
+.floating-phone {
 position: fixed;
-bottom: 24px;
-left: 24px;
-display: flex;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+padding: 14px 20px;
+background: var(--accent);
+color: #fff;
+font-size: 1.1rem;
+font-weight: 700;
+text-align: center;
 z-index: 1060;
-padding: 8px;
-background: rgba(255,255,255,0.95);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(0,0,0,0.06);
-border-radius: 16px;
-box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-}
-.floating-messengers a {
-width: 48px;
-height: 48px;
-border-radius: 12px;
+text-decoration: none;
+border: none;
+box-shadow: 0 -4px 20px rgba(37, 99, 235, 0.3);
+transition: all 0.2s ease;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 1.4rem;
-text-decoration: none;
-transition: all 0.2s ease;
+gap: 8px;
 }
-.floating-messengers a:active { transform: scale(0.92); }
-.floating-messengers .fm-telegram { background: #0088cc; color: #fff; }
-@media (min-width: 768px) {
-.floating-messengers { display: none; }
+.floating-phone:hover {
+background: var(--accent-light);
+color: #fff;
 }
+.floating-phone i { font-size: 1.3rem; }
 
 /* Floating Avito badge (Top-right) */
 .floating-avito {
@@ -1811,34 +1806,6 @@ gap: 8px;
 .map-placeholder span { font-size: 0.9rem; }
 @media (max-width: 575.98px) {
 .map-placeholder { aspect-ratio: 4/3; }
-}
-
-.floating-phone {
-position: fixed;
-bottom: 24px;
-right: 24px;
-width: 56px;
-height: 56px;
-border-radius: 50%;
-background: var(--accent);
-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.5rem;
-box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4);
-z-index: 1060;
-transition: var(--transition);
-animation: pulseGlow 2.5s infinite;
-text-decoration: none;
-}
-.floating-phone:hover {
-background: var(--accent-light);
-color: #fff;
-transform: scale(1.08);
-}
-@media (min-width: 992px) {
-.floating-phone { display: none; }
 }
 </style>
 </head>
@@ -2831,8 +2798,6 @@ transform: scale(1.08);
 </ul>
 <div class="social-links mt-3">
 <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-<a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-<a href="#" aria-label="Viber"><i class="bi bi-phone-vibrate"></i></a>
 </div>
 </div>
 </div>
@@ -2844,10 +2809,6 @@ transform: scale(1.08);
 </div>
 </footer>
 
-<div class="floating-messengers">
-<a href="#" class="fm-telegram" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
-</div>
-
 <a href="https://www.avito.ru/user/bfe730753d86ad7cb978c4fb8c50d19e/profile" target="_blank" rel="noopener noreferrer" class="floating-avito">
 <img src="assets/avito-icon.webp" alt="Авито" width="28" height="28" style="border-radius:4px;flex-shrink:0;">
 <span class="stars">★★★★★</span>
@@ -2855,8 +2816,8 @@ transform: scale(1.08);
 <span class="count">· 20 отзывов</span>
 </a>
 
-<a href="tel:+79199665061" class="floating-phone" aria-label="Позвонить">
-<i class="bi bi-telephone-fill"></i>
+<a href="tel:+791****5061" class="floating-phone" aria-label="Позвонить">
+<i class="bi bi-telephone-fill me-1"></i> Позвонить
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
