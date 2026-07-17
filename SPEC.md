@@ -4,6 +4,10 @@
 Landing page for a private appliance repair master ("Звоните-Леше").  
 Target audience: homeowners in Moscow (Maryino, Bratyevo, Kapotnya, Brateyevo districts) needing oven or hob repair.
 
+## Content
+- **Email**: zvonite-leshe@yandex.ru (footer contacts section, mailto link)
+- **Phone**: +7 (919) 966-50-61
+
 ## Analytics
 - **Yandex.Metrika** — counter ID: 110808907
   - webvisor: enabled
